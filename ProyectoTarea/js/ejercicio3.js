@@ -13,38 +13,39 @@ $('#calcularSalario').click(function(){
     var nombre = $('#nombreEmpleado').val();
     var horas = parseInt($('#horas').val());
     var precio = parseInt($('#precio').val());
-    console.log(nombre);
+
     if(horas > 0 && precio > 0){
-      let salario = (horas * precio);
-      let seguroSocial = salario * 0.05;
-      let pension = salario * 0.1;
-      salario = salario - (seguroSocial + pension);
 
-      $('#resultado').append(
-          `
-          <div>
-              <p>El salario del empleado <strong>`+ nombre +`</strong> despues de deducciónes es: <strong>`+ salario +`</strong></p>
-          </div>
-          `
-      )
-
-      $("#calcularSalario").css("display", "none");
-      console.log("El salario es: " + salario)
-
-    }else{
-
-      $('#resultado').append(
-          `
-          <div>
-              <p>Las horas trabajadas o el precio por hora trabajada no pueden ser cero .</p>
-          </div>
-          `
-      )
-
+      let salario = horas * precio;
+      if (horas <= 35) {
+        resolucion(nombre,salario);
+      }else{
+        salario  = (horas - 35) * (precio * 1.5) + precio * 35;
+        if (salario <= 2000) {
+          console.log("libre de impuestos");
+          resolucion(nombre,salario);
+        }else if (salario <= 2220) {
+          let impuesto = (salario - 2000) * 0.2;
+          resolucion(nombre,salario);
+        }
+          let impuesto = (salario - 2220) * 0.3 + (220 * 0.2);
+          resolucion(nombre,salario);
+      }
     }
-
 })
 
+function resolucion (nombre,salario){
+  $('#resultado').append(
+    `
+    <div>
+    <p>El salario del empleado <strong>`+ nombre +`</strong> despues de deducciónes es: <strong>`+ salario +`</strong></p>
+    </div>
+    `
+  )
+
+  $("#calcularSalario").css("display", "none");
+  console.log("El salario es: " + salario)
+}
 
 $('#btnLimpiar').click(function(){
 

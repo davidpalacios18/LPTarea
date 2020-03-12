@@ -51,7 +51,7 @@ $('#calcularSalario').click(function(){
       `
       <div id="mensaje">
         <p>Verifique que lo datos esten escritos correctamente.<br>
-        Las horas trabajadas o el precio por hora trabajada no pueden ser cero
+        Las horas trabajadas o el precio por hora trabajada no pueden ser menores o iguales a cero
         </p>
       </div>
       `

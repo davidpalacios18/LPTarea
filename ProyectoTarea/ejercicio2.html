@@ -87,7 +87,8 @@
             <div class="col-6 offset-3">
                 <header class="text-center">
                     <p>
-                        Expresion: aX+b = 0
+                        La ecuación a resolver es de el tipo:<br>
+                        <strong>aX + b = 0</strong>
                     </p>
                 </header>
                 <br>
@@ -100,10 +101,18 @@
                         <label for="valorB" style="color: white;">Ingrese el valor de "b"</label>
                         <input id="valorB" name="valorB" type="text" class="form-control">
                     </div>
-                    <div class="form-group">
-                        <button id="calcularX" class="btn btn-danger">Calcular X</button>
-                    </div>
                 </form>
+                <div class="form-group text-center">
+                    <button id="calcularX" class="btn btn-danger">Calcular X</button>
+                </div>
+                <div id="resultado" class="form-group">
+                    
+                </div>
+                <div id="btnLimpiar">
+                    <div class="form-group text-center">
+                        <button id="limpiar" class="btn btn-success">Volver a intentar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -136,6 +145,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.numeric.js"></script>
+    <script src="js/ejercicio2.js"></script>
 </body>
 
 </html>

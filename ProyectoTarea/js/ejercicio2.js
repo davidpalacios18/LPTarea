@@ -36,7 +36,6 @@ $('#calcularX').click(function(){
             `
         )
         $("#calcularX").css("display", "none");
-        
         console.log("El valor no puede ser encontrado")
     }
 });

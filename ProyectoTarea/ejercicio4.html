@@ -63,7 +63,7 @@
         </div>
     </header>
     <!-- Header End -->
-    
+
     <!-- Classes Section Begin -->
     <section class="classes-section">
         <div class="class-title set-bg" data-setbg="img/classes-title-bg.jpg" style="height: 320px !important; padding: 130px !important">
@@ -80,13 +80,37 @@
         </div>
     </section>
     <!-- Classes Section End -->
-    
+
     <!-- Body of the Program -->
     <section class="classes-section" style="height: 100%">
+      <div class="row">
+        <div class="col-6 offset-3">
+            <header class="text-center mt-3">
+                <p>Evaluamos el dia de la semana.</p>
+            </header>
+            <br>
+            <form>
+                <div class="form-group">
+                    <label for="numero" style="color: white;">Ingrese el numero a ser evaluado</label>
+                    <input id="numero" name="numero" type="text" class="form-control">
+                </div>
+            </form>
+            <div class="form-group text-center">
+                <button id="evaluarDia" class="btn btn-danger">Evaluar</button>
+            </div>
+            <div id="resultado" class="form-group">
 
+            </div>
+            <div id="btnLimpiar">
+                <div class="form-group text-center">
+                    <button id="limpiar" class="btn btn-success">Volver a intentar</button>
+                </div>
+            </div>
+        </div>
+      </div>
     </section>
     <!-- Body of the Program End -->
-    
+
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="copyright-text">
@@ -114,6 +138,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/ejercicio4.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@ $(document).ready(function(){
 })
 
 $('#evaluarDia').click(function(){
+  $('#evaluarDia').css('display', "none");
   $("#numero").prop('disabled', true);
   $("#resultado").css("display", "block");
   $("#btnLimpiar").css("display", "block");

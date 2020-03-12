@@ -4,34 +4,35 @@ $(document).ready(function(){
 })
 
 $('#calcularSalario').click(function(){
-    $("#nombreEmpleado").prop('disabled', true);
-    $("#horas").prop('disabled', true);
-    $("#precio").prop('disabled', true);
-    $("#resultado").css("display", "block");
-    $("#btnLimpiar").css("display", "block");
+  $('#calcularSalario').css('display', "none");
+  $("#nombreEmpleado").prop('disabled', true);
+  $("#horas").prop('disabled', true);
+  $("#precio").prop('disabled', true);
+  $("#resultado").css("display", "block");
+  $("#btnLimpiar").css("display", "block");
 
-    var nombre = $('#nombreEmpleado').val();
-    var horas = parseInt($('#horas').val());
-    var precio = parseInt($('#precio').val());
+  var nombre = $('#nombreEmpleado').val();
+  var horas = parseInt($('#horas').val());
+  var precio = parseInt($('#precio').val());
 
-    if(horas > 0 && precio > 0){
+  if(horas > 0 && precio > 0){
 
-      let salario = horas * precio;
-      if (horas <= 35) {
+    let salario = horas * precio;
+    if (horas <= 35) {
+      resolucion(nombre,salario);
+    }else{
+      salario  = (horas - 35) * (precio * 1.5) + precio * 35;
+      if (salario <= 2000) {
+        console.log("libre de impuestos");
         resolucion(nombre,salario);
-      }else{
-        salario  = (horas - 35) * (precio * 1.5) + precio * 35;
-        if (salario <= 2000) {
-          console.log("libre de impuestos");
-          resolucion(nombre,salario);
-        }else if (salario <= 2220) {
-          let impuesto = (salario - 2000) * 0.2;
-          resolucion(nombre,salario);
-        }
-          let impuesto = (salario - 2220) * 0.3 + (220 * 0.2);
-          resolucion(nombre,salario);
+      }else if (salario <= 2220) {
+        let impuesto = (salario - 2000) * 0.2;
+        resolucion(nombre,salario);
       }
+        let impuesto = (salario - 2220) * 0.3 + (220 * 0.2);
+        resolucion(nombre,salario);
     }
+  }
 })
 
 function resolucion (nombre,salario){

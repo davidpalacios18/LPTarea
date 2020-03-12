@@ -49,5 +49,7 @@ $('#limpiar').click(function(){
     $('#valorA').prop('disabled', false);
     $('#valorB').prop('disabled', false);
 
-    $("#calcularX").css("display", "block");
+    $("#calcularX").css("display", "");
+    $("#valorX").remove();
+    $("#btnLimpiar").css("display", "none");
 });

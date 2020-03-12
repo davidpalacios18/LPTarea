@@ -12,33 +12,49 @@ $('#calcularX').click(function(){
   $("#resultado").css("display", "block");
   $("#btnLimpiar").css("display", "block");
 
-  var a = parseInt($('#valorA').val());
-  var b = parseInt($('#valorB').val());
-  var x;
+  var valorA = $('#valorA').val()
+  var valorB = $('#valorB').val()
 
-  if (a != 0) {
-      x = ((-b)/a)
-      $('#resultado').append(
-          `
-          <div id="valorX">
-              <p>El valor de X es: <strong>`+ x +`</strong></p>
-          </div>
-          `
-      )
-      $("#calcularX").css("display", "none");
-
-      console.log("El valor de x es: " + x)
+  if (valorA != '' && valorB != '') {
+    let a = parseInt(valorA);
+    let b = parseInt(valorB);
+    let x;
+    if (a != 0) {
+        x = ((-b)/a)
+        $('#resultado').append(
+            `
+            <div id="valorX">
+                <p>El valor de X es: <strong>`+ x +`</strong></p>
+            </div>
+            `
+        )
+        $("#calcularX").css("display", "none");
+  
+        console.log("El valor de x es: " + x)
+    } else {
+        $('#resultado').append(
+            `
+            <div id="valorX">
+                <p>
+                El valor de <strong>"a"</strong> no puede ser 0. División no definida</p>
+            </div>
+            `
+        )
+        $("#calcularX").css("display", "none");
+        console.log("El valor no puede ser encontrado")
+    }
   } else {
-      $('#resultado').append(
-          `
-          <div id="valorX">
-              <p>El valor de <strong>"a"</strong> no puede ser 0. División no definida</p>
-          </div>
-          `
-      )
-      $("#calcularX").css("display", "none");
-      console.log("El valor no puede ser encontrado")
+    $('#resultado').append(
+        `
+        <div id="valorX">
+            <p>
+            Verifique que lo datos esten escritos correctamente.<br>
+            El valor de <strong>"a"</strong> no puede ser 0. División no definida</p>
+        </div>
+        `
+    )
   }
+
 });
 
 $('#limpiar').click(function(){

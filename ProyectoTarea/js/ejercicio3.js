@@ -1,6 +1,8 @@
 $(document).ready(function(){
-      $("#resultado").css("display", "none");
-      $("#btnLimpiar").css("display", "none");
+  $('#horas').numeric();
+  $('#precio').numeric();
+  $("#resultado").css("display", "none");
+  $("#btnLimpiar").css("display", "none");
 })
 
 $('#calcularSalario').click(function(){
@@ -15,7 +17,7 @@ $('#calcularSalario').click(function(){
   var horas = parseInt($('#horas').val());
   var precio = parseInt($('#precio').val());
 
-  if(horas > 0 && precio > 0){
+  if(horas > 0 && precio > 0 && nombre != ''){
 
     let salario = horas * precio;
     if (horas <= 35) {
@@ -32,14 +34,24 @@ $('#calcularSalario').click(function(){
         let impuesto = (salario - 2220) * 0.3 + (220 * 0.2);
         resolucion(nombre,salario);
     }
+  }else{
+    $('#resultado').append(
+      `
+      <div id="mensaje">
+        <p>Verifique que lo datos esten escritos correctamente.<br>
+        Las horas trabajadas o el precio por hora trabajada no pueden ser cero
+        </p>
+      </div>
+      `
+    )
   }
 })
 
 function resolucion (nombre,salario){
   $('#resultado').append(
     `
-    <div>
-    <p>El salario del empleado <strong>`+ nombre +`</strong> despues de deducciónes es: <strong>`+ salario +`</strong></p>
+    <div id="mensaje">
+      <p>El salario del empleado <strong>"`+ nombre +`"</strong> despues de deducciónes es: <strong>`+ salario +`</strong></p>
     </div>
     `
   )
@@ -58,7 +70,8 @@ $('#btnLimpiar').click(function(){
   $("#precio").prop('disabled', false);
   $("#precio").val('');
 
-  $("#calcularSalario").css("display", "block");
+  $("#calcularSalario").css("display", "");
   $("#resultado").css("display", "none");
+  $("#mensaje").remove();
   $("#btnLimpiar").css("display", "none");
 })

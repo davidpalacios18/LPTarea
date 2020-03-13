@@ -84,7 +84,35 @@
 
     <!-- Body of the Program -->
     <section class="classes-section" style="height: 100%; padding: 55px;">
-
+        <div class="row">
+            <div class="col-6 offset-3">
+                <header class="text-center mt-3">
+                    <p>Juega con Nosotros!</p>
+                </header>
+                <br>
+                <form id="formulario">
+                    <div class="form-group">
+                        <label for="cantidad-numero" style="color: white;">Ingrese la cantidad de numeros que deseas ver de la serie</label>
+                        <input id="cantidad-numero" name="cantidad-numeros" type="text" class="form-control">
+                    </div>
+                    
+                </form>
+                <div id="btn-cantidad">
+                    <div class="form-group text-center">
+                        <button id="agregar-cantidad" class="btn btn-success">Agregar Cantidad</button>
+                    </div>
+                </div>
+                <div id="mensajito" class="form-group"></div>
+                <div id="resultado" class="form-group"></div>
+                <div id="verificador" class="form-group"></div>
+                <div id="mensaje-final" class="form-group"></div>
+                <div id="btnLimpiar">
+                    <div class="form-group text-center">
+                        <button id="limpiar" class="btn btn-success">Volver a Jugar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Body of the Program End -->
 
@@ -115,6 +143,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/ejercicio7.js"></script>
+    <script src="js/jquery.numeric.js"></script>
 </body>
 
 </html>

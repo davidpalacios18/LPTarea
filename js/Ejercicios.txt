@@ -6,3 +6,7 @@ el total a pagar  por la compra de n productos.
 Calcular y desplegar los primeros n valores de la siguiente serie, se debera preguntar al usuario
 cual es el  siguiente valor de la serie, si el usuario responde correctamente se le felicitara, 
 de lo contrario se desplegarael  valor correcto
+
+i=o
+
+serie=serie +i*5

@@ -30,9 +30,10 @@ $('#calcularSalario').click(function(){
       }else if (salario <= 2220) {
         let impuesto = (salario - 2000) * 0.2;
         resolucion(nombre,salario);
-      }
+      }else{
         let impuesto = (salario - 2220) * 0.3 + (220 * 0.2);
         resolucion(nombre,salario);
+      }
     }
   }else{
     $('#resultado').append(

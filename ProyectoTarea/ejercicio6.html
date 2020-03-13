@@ -84,8 +84,51 @@
 
     <!-- Body of the Program -->
     <section class="classes-section" style="height: 100%; padding: 55px;">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <header class="text-center mt-3">
+                    <p>Ingrese los datos que acontinuación se le piden:</p>
+                </header>
+                <br>
+                <form id="formulario">
+                    <div class="form-group">
+                        <label for="cantidad-producto" style="color: white;">Ingrese la cantidad de productos</label>
+                        <input id="cantidad-producto" name="cantidad-producto" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre-producto" style="color: white;">Ingrese el nombre del producto</label>
+                        <input id="nombre-producto" name="nombre-producto" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="precio-producto" style="color: white;">Ingrese el precio del producto</label>
+                        <input id="precio-producto" name="precio-producto" type="text" class="form-control">
+                    </div>
+                </form>
+                <div id="btn-agregar">
+                    <div class="form-group text-center">
+                        <button id="agregar-producto" class="btn btn-success">Agregar Producto</button>
+                    </div>
+                </div>
 
-    </section>
+                
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: white;">CANTIDAD</th>
+                        <th scope="col" style="color: white;">NOMBRE DEL PRODUCTO</th>
+                        <th scope="col" style="color: white;">PRECIO </th>
+                        <th scope="col" style="color: white;">SUBTOTAL</th>
+                        <th scope="col" style="color: white;">TOTAL</th>
+                      </tr>
+                    </thead>
+                    <tbody id="resultado" style="color:white"> 
+                        
+                    </tbody>
+                  </table>
+                
+            </div>
+        </div>
+      </section>
     <!-- Body of the Program End -->
 
     <!-- Footer Section Begin -->
@@ -115,6 +158,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/ejercicio6.js"></script>
+    <script src="js/jquery.numeric.js"></script>
 </body>
 
 </html>

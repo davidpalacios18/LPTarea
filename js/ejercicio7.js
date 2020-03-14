@@ -6,7 +6,7 @@ $(document).ready(function(){
 $('#agregar-cantidad').click(function(){
     var cantidad = parseInt($('#cantidad-numero').val());
     $("#cantidad-numero").prop('disabled', true);
-    $("#agregar-cantidad").remove();
+    $("#agregar-cantidad").prop('disabled', true);
     $('#mensajito').append(
         `
         <div id="valorX">
@@ -78,5 +78,16 @@ $('#agregar-cantidad').click(function(){
         });
               
   }) 
-
+  $('#btnLimpiar').click(function(){
+    $("#resultado").css("display", "none");
+    //$("#resultado").remove();
+    $("#mensajito").remove();
+    $("#verificador").remove();
+    $("#mensaje-final").remove();
+   
+    $("#btnLimpiar").css("display", "none");
+    $("#agregar-cantidad").prop( 'disabled', false);
+    $("#cantidad-numero").prop('disabled', false);
+    $("#cantidad-numero").val('');
+  })
   

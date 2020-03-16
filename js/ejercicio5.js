@@ -36,7 +36,7 @@ $('#evaluarLetra').click(function(){
 $('#btnLimpiar').click(function(){
 
   $("#resultado").css("display", "none");
-  $("#letra").prop('disabled', false);
+  $("#mensaje-final").prop('disabled', false);
   $("#letra").val('');
 
   $("#evaluarLetra").css("display", "");

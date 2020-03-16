@@ -24,7 +24,7 @@ $('#calcularSalario').click(function(){
     if (horas <= 35) {
       $('#resultado').append(`
         <div id="mensaje">
-          <p>El salario del empleado <strong>`+ nombre +`</strong> es: <strong>`+ salario +`</strong></p>
+          <p>El salario del empleado <strong>`+ nombre +`</strong> es: <strong>L. `+ salario +`</strong></p>
         </div>
         `);
         $("#calcularSalario").css("display", "none");

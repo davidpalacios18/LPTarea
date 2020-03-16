@@ -38,7 +38,7 @@ $('#calcularSalario').click(function(){
             <li>Deducciones: `+deducciones+`</li>
           </ul>
           <hr>
-          <p>El salario del empleado <strong>`+ nombre +`</strong> despues de deducciónes es: <strong>`+ salarioNeto +`</strong></p>
+          <p>El salario del empleado <strong>`+ nombre +`</strong> despues de deducciónes es: <strong>L. `+ salarioNeto +`</strong></p>
         </div>
         `
     )

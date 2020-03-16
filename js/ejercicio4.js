@@ -31,7 +31,7 @@ $('#evaluarDia').click(function(){
     case 3:
       $('#resultado').append(`
         <div id="mensaje">
-          <p>El dia es : <strong>Miercoles</strong> .</p>
+          <p>El dia es : <strong>Miércoles</strong> .</p>
         </div>
         `)
       break;

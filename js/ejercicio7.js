@@ -79,15 +79,16 @@ $('#agregar-cantidad').click(function(){
               
   }) 
   $('#btnLimpiar').click(function(){
-    $("#resultado").css("display", "none");
-    //$("#resultado").remove();
-    $("#mensajito").remove();
-    $("#verificador").remove();
-    $("#mensaje-final").remove();
-   
-    $("#btnLimpiar").css("display", "none");
-    $("#agregar-cantidad").prop( 'disabled', false);
-    $("#cantidad-numero").prop('disabled', false);
-    $("#cantidad-numero").val('');
+     location.reload();
+    //$("#resultado").css("display", "none");
+    ////$("#resultado").remove();
+    //$("#mensajito").remove();
+    //$("#verificador").remove();
+    //$("#mensaje-final").remove();
+   //
+    //$("#btnLimpiar").css("display", "none");
+    //$("#agregar-cantidad").prop( 'disabled', false);
+    //$("#cantidad-numero").prop('disabled', false);
+    //$("#cantidad-numero").val('');
   })
   
